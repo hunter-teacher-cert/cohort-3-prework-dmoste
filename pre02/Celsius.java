@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Temp{
+public class Celsius{
 	public static void main(String[] args){
 		double temperatureInC;
 		double temperatureInF;
