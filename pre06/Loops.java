@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.lang.Math;
 
 public class Loops{
 	public static double power(double x, int n){
@@ -25,12 +26,13 @@ public class Loops{
 	public static double squareRoot(double a){
 		double initial_guess = a/2;
     double new_guess = 1;
-		
-		for(int i = 1; i <= 10; i++){
-			new_guess = (initial_guess + (a/initial_guess))/2;
-			
-			initial_guess = new_guess;
-		}
+    double difference;
+
+    do{
+      new_guess = (initial_guess + (a/initial_guess))/2;
+      difference = Math.abs(new_guess - initial_guess);
+      initial_guess = new_guess;
+    } while(difference > 0.0001);
 		
 		return new_guess;
 	}
