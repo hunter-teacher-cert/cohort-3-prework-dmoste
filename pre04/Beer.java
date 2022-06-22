@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Beer{
 	public static void main(String[] args) {
-    int bottles = 3;
+    int bottles = 99;
 
     drink(bottles);
 	}
