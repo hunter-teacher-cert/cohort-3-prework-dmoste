@@ -24,13 +24,12 @@ public class Craps{
     int point = shoot(2, 6);
     
     if(point == 2 || point == 3 || point == 12){
-      System.out.print("Loss ");
+      System.out.print("Loss: first roll of ");
       System.out.println(point);
     } else if(point == 7 || point == 11){
-      System.out.print("Win ");
+      System.out.print("Win: first roll of ");
       System.out.println(point);
     } else{
-      System.out.print(point);
       int result = 0;
       
       do{
@@ -38,11 +37,11 @@ public class Craps{
       } while(result != 7 && result != point);
       
       if(result == 7){
-        System.out.print(" Loss ");
-        System.out.println(result);
+        System.out.printf("Loss: rolled %d, but point was %d", result, point);
+        System.out.println();
       } else{
-        System.out.print(" Win ");
-        System.out.println(result);
+        System.out.printf("Win: rolled %d and point was %d", result, point);
+        System.out.println();
       }
     }
   }
