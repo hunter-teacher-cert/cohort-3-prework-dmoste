@@ -8,9 +8,7 @@ public class Seive{
 
     for(int i = 2; i < n; i++){
       if(primes[i] == true){
-        System.out.printf("i is %d", i);
         for(int j = i*i; j < n; j = j+i){
-          System.out.printf("j is %d", j);
           primes[j] = false;
         }
       }
